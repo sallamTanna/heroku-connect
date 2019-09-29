@@ -13,32 +13,11 @@ app.post('/update', function(req, res) {
     pg.connect(process.env.DATABASE_URL, function (err, conn, done) {
         // watch for any connect issues
         if (err) console.log(err);
-
-
-        //
-        // conn.query(
-        //     'SELECT Question_1__c FROM  salesforce.application__c ',
-        //
-        //     function(err, result) {
-        //         if (err != null || result.rowCount == 0) {
-        //           console.log('some error');
-        //         }
-        //         else {
-        //             console.log('eeeeeee', result);
-        //             res.send(result);
-        //             done();
-        //         }
-        //     }
-        // );
         conn.query('SELECT Question_1__c FROM  salesforce.application__c', function(err, result) {
           console.log('2. select query');
           if (err) {return console.error('Errrror:', err)}  
           console.log("totalllllllll : " + result.json());
         });
-
-
-
-
     });
 });
 
