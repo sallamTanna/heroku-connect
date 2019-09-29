@@ -16,7 +16,7 @@ app.post('/update', function(req, res) {
         conn.query('SELECT Question_1__c FROM  salesforce.application__c', function(err, result) {
           console.log('2. select query');
           if (err) {return console.error('Errrror:', err)}  
-          console.log("totalllllllll : " + result.json());
+          console.log("total : " + result.json());
         });
     });
 });
