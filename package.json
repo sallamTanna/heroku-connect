@@ -7,7 +7,7 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.13.1",
+    "express": "^4.17.3",
     "body-parser": "^1.13.2",
     "pg": "^4.4.0"
   }
